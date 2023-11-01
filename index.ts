@@ -1,4 +1,4 @@
-const express = require('express')
+import express from 'express'
 
 const app = express()
 const port = 3000
@@ -12,8 +12,8 @@ app.get('/:url', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    let data = req.body;
-    console.log(data);
+    const data = req.body;
+    console.log(data + "qweqwe");
     res.send('Data Received: ' + JSON.stringify(data));
 })
 
